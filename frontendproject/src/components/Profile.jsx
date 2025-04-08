@@ -12,7 +12,7 @@ const Profile = () => {
   // console.log(data);
   const logoutHandler =async () =>{
    try {
-    const response =await axios.get('http://localhost:4000/users/logout',{
+    const response =await axios.get('https://librarymanagementsystem-backend-71te.onrender.com/users/logout',{
       headers:{
         authorization:`Bearer ${token}`
       }
