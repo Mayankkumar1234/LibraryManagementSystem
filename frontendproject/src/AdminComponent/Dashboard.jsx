@@ -13,7 +13,7 @@ const Dashboard = () => {
 
          const getDashboardData =async ()=>{
            try {
-            const data = await axios.get('http://localhost:4000/dashboard/allInfo',{
+            const data = await axios.get('https://librarymanagementsystem-backend-71te.onrender.com/dashboard/allInfo',{
               headers: {
                 authorization: `Bearer ${localStorage.getItem('token')}`,
               },
@@ -25,7 +25,7 @@ const Dashboard = () => {
          }
    const getAllUsers =async () =>{
    try {
-    const users =  await axios.get('http://localhost:4000/users/getAllUsers',{
+    const users =  await axios.get('https://librarymanagementsystem-backend-71te.onrender.com/users/getAllUsers',{
       headers: {
         authorization: `Bearer ${localStorage.getItem('token')}`,   
       },
@@ -41,7 +41,7 @@ const Dashboard = () => {
      
    const deleteHandler =async (userId)=>{ 
       try {
-        await axios.delete(`http://localhost:4000/users/${userId}`,{
+        await axios.delete(`https://librarymanagementsystem-backend-71te.onrender.com/users/${userId}`,{
           headers:{
           authorization:`Bearer ${localStorage.getItem('token')}`
           }
