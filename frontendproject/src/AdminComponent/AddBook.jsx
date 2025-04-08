@@ -12,7 +12,7 @@ const AddBook = () => {
  const addBook =async (e)=>{
     e.preventDefault()
     try {
-      const response = await axios.post('http://localhost:4000/books/addbook',{
+      const response = await axios.post('https://librarymanagementsystem-backend-71te.onrender.com/books/addbook',{
         url:image.current.value,
         title:title.current.value,
         author:author.current.value,
