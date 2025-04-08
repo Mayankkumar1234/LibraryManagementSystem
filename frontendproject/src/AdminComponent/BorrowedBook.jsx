@@ -7,7 +7,7 @@ const BorrowedBook = () => {
  const [borrowBooks, setBorrowBooks]  = useState(null)
    const borrowedBookDetails =async ()=>{
     try {
-    const books = await axios.get('http://localhost:4000/borrowBooks/allBorrowInfo',{
+    const books = await axios.get('https://librarymanagementsystem-backend-71te.onrender.com/borrowBooks/allBorrowInfo',{
       headers: {
         authorization:  `Bearer ${localStorage.getItem('token')}`,
       },
