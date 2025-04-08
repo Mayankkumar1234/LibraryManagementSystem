@@ -31,7 +31,7 @@ const AllBooks = () => {
     let user= JSON.parse(localStorage.getItem('user'))
 
       try {
-       const response= await axios.get(`http://localhost:4000/borrowBooks/${user._id}/${bookId}`,{
+       const response= await axios.get(`https://librarymanagementsystem-backend-71te.onrender.com/borrowBooks/${user._id}/${bookId}`,{
          headers: {
           authorization: `Bearer ${localStorage.getItem('token')}`,
          },
@@ -46,7 +46,7 @@ const AllBooks = () => {
    e.preventDefault();
    let bookId = bookData._id;
        try{
-        const response = await axios.put(`http://localhost:4000/books/${bookId}`,{
+        const response = await axios.put(`https://librarymanagementsystem-backend-71te.onrender.com/books/${bookId}`,{
           title:title,
           author:author,
           availableCopies:acopies
