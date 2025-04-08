@@ -75,7 +75,7 @@ const AllBooks = () => {
    }
   const removeBook =async (bookId)=>{ 
    try{
-  const response = await axios.delete(`http://localhost:4000/books/deleteBook/${bookId}`,{
+  const response = await axios.delete(`https://librarymanagementsystem-backend-71te.onrender.com/books/deleteBook/${bookId}`,{
     headers: {
       authorization: `Bearer ${localStorage.getItem('token')}`,
      },
