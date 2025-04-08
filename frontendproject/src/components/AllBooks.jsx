@@ -15,7 +15,7 @@ const AllBooks = () => {
 
   const getAllBooks=async ()=>{
      try {
-      const allBook = await axios.get('http://localhost:9000/books/getBooks',{
+      const allBook = await axios.get('http://localhost:4000/books/getBooks',{
         headers: {
           authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -30,9 +30,8 @@ const AllBooks = () => {
    const borrowABook=async (bookId)=>{
     let user= JSON.parse(localStorage.getItem('user'))
 
-    // http://localhost:9000/borrowBooks/6761b02017bf32c7f79db2e1/6764520b645fd25eef92fcb2
-     try {
-       const response= await axios.get(`http://localhost:9000/borrowBooks/${user._id}/${bookId}`,{
+      try {
+       const response= await axios.get(`http://localhost:4000/borrowBooks/${user._id}/${bookId}`,{
          headers: {
           authorization: `Bearer ${localStorage.getItem('token')}`,
          },
@@ -47,7 +46,7 @@ const AllBooks = () => {
    e.preventDefault();
    let bookId = bookData._id;
        try{
-        const response = await axios.put(`http://localhost:9000/books/${bookId}`,{
+        const response = await axios.put(`http://localhost:4000/books/${bookId}`,{
           title:title,
           author:author,
           availableCopies:acopies
@@ -76,7 +75,7 @@ const AllBooks = () => {
    }
   const removeBook =async (bookId)=>{ 
    try{
-  const response = await axios.delete(`http://localhost:9000/books/deleteBook/${bookId}`,{
+  const response = await axios.delete(`http://localhost:4000/books/deleteBook/${bookId}`,{
     headers: {
       authorization: `Bearer ${localStorage.getItem('token')}`,
      },
