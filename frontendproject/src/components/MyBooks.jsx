@@ -8,7 +8,7 @@ const getUserAllBooks=async ()=>{
 
   let user = JSON.parse(localStorage.getItem('user')) 
 try {
-    const userBooks = await axios.get(`http://localhost:9000/borrowBooks/getUserBooks/${user?._id}`)
+    const userBooks = await axios.get(`http://localhost:4000/borrowBooks/getUserBooks/${user?._id}`)
     setUserPurchase(userBooks.data.borrowedBooks)
 } catch (error) {
   toast.error(error.message);
@@ -18,7 +18,7 @@ try {
 
  try {
   let user= JSON.parse(localStorage.getItem('user'));
-  const response = await axios.get(`http://localhost:9000/borrowBooks/returnBook/${user._id}/${bookId}`,{
+  const response = await axios.get(`http://localhost:4000/borrowBooks/returnBook/${user._id}/${bookId}`,{
       headers: {
         authorization: `Bearer ${localStorage.getItem('token')}`,
       },

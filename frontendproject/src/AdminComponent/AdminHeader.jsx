@@ -13,7 +13,7 @@ const AdminHeader = () => {
     let token = localStorage.getItem('token') || null
 
     try {
-        await axios.get('http://localhost:9000/users/logout',{
+        await axios.get('http://localhost:4000/users/logout',{
         headers:{
           authorization:`Bearer ${token}`
         }

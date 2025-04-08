@@ -24,7 +24,7 @@ const Navigate = useNavigate()
    try {
     // Send POST request with Axios
     const response = await axios.post(
-      "http://localhost:9000/users/register",
+      "http://localhost:4000/users/register",
       {
         name:name.current.value,
         email:email.current.value,
@@ -51,7 +51,7 @@ const Navigate = useNavigate()
     e.preventDefault();
     try {
      const response = await axios.post(
-       "http://localhost:9000/users/login",
+       "http://localhost:4000/users/login",
        {
        email:email.current.value,
        password:password.current.value,
