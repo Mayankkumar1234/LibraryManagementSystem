@@ -15,7 +15,7 @@ const AllBooks = () => {
 
   const getAllBooks=async ()=>{
      try {
-      const allBook = await axios.get('http://localhost:4000/books/getBooks',{
+      const allBook = await axios.get('https://librarymanagementsystem-backend-71te.onrender.com/books/getBooks',{
         headers: {
           authorization: `Bearer ${localStorage.getItem('token')}`,
         },
